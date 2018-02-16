@@ -1,0 +1,187 @@
+<!doctype html>
+<!--
+//
+// Copyright 2008-2013 Qianyan Cai
+// Under the terms of the GNU General Public License version 3
+//
+-->
+<html>
+<head>
+<meta charset=UTF-8>
+<title>Qutum</title>
+<link rel=icon href=qutum.png>
+<style type='text/css'>
+	body	{ padding:0.5ex 1% 0.5ex 2%; margin:0; font-family:sans-serif; }
+	sup		{ display:block; text-align:center; }
+	h1,h2	{ padding-bottom:0.2ex; border-bottom:0.3ex solid #ccddff; }
+	h3		{ padding-left:1ex; color:#703000; }
+	h4		{ padding-left:2ex; color:#703000; }
+	a:link		{ color: #0040ee; text-decoration:none; }
+	a:visited	{ color: #6000cc; text-decoration:none; }
+	a:hover		{ background:#ddddff; }
+	#left		{ min-width:23em; }
+	#right		{ min-width:22em; }
+	#leftWd		{ width:23em; }
+	#rightWd	{ visibility:hidden; width:22em; }
+</style>
+</head>
+<body>
+
+
+<!--==================== English ====================-->
+
+<div id=left><sup><a href=index-en.html title='English only'>English</a><span id=hintZh> then Chinese</span></sup>
+
+<h1>Qutum <img src=qutum.png alt=''></h1>
+<p>Qutum, short for quantum, is a simple, efficient, powerful and layered programming language.
+<p>Project hosted <a href='https://github.com/qutum/'>here</a>.
+
+<h2>Feature</h2>
+<h3>Layer 1</h3>
+<ul>
+	<li>Quite concise semantic and syntax</li>
+	<li>No side effect pure functional</li>
+	<li>Data flow</li>
+	<li>Pure object oriented</li>
+	<li>Memory safety</li>
+	<li>Closure function</li>
+	<li>Named parameter</li>
+	<li>Default parameter</li>
+	<li>No null nor nil</li>
+	<li>Multiple inheritence without name conflict</li>
+	<li>Static type</li>
+	<li>Type inference</li>
+	<li>Polymorphic generic type</li>
+	<li>Duck typing</li>
+	<li>Declarative concurrence</li>
+</ul>
+<h3>Layer 2</h3>
+<ul>
+	<li>C backend</li>
+	<li>WebAssembly backend</li>
+	<li>Lua backend</li>
+	<li>Aggressive memory management</li>
+	<li>Global garbage collection</li>
+	<li>Integer optimization</li>
+	<li>Tail recursion elimination</li>
+</ul>
+<p>A compiler is under development, you could try an old incomplete <a href=qutum/ target=_blank>graphical demo</a> on HTML5.
+
+<h2>License</h2>
+<p>Code license of Qutum is <a href='http://www.gnu.org/licenses/gpl.html'>GNU General Public License version 3</a>.
+<p>Content license of Qutum is <a href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons 3.0 BY-SA</a>.
+
+<h2>Copyright</h2>
+<p>Copyright 2008-2013 <a href='http://qiantum.com'>Qianyan Cai</a>.
+
+<hr id=leftWd></div>
+
+
+<!--==================== Simplified Chinese ====================-->
+
+<div id=right><sup id=zh>Simplified Chinese</sup>
+
+<h1>Qutum <img src=qutum.png alt=''></h1>
+<p>Qutum，quantum简写，是一个简单高效强大的分层的程序语言。
+<p>项目站点<a href='https://github.com/qutum/'>在这里</a>。
+
+<h2>特性</h2>
+<h3>层1</h3>
+<ul>
+	<li>语义和语法相当简洁</li>
+	<li>纯函数式无副作用</li>
+	<li>数据流</li>
+	<li>纯面向对象</li>
+	<li>内存安全</li>
+	<li>closure函数</li>
+	<li>命名参数</li>
+	<li>默认参数</li>
+	<li>无null无nil</li>
+	<li>多重继承无名称冲突</li>
+	<li>静态类型</li>
+	<li>类型推导</li>
+	<li>多态泛型</li>
+	<li>duck类型</li>
+	<li>声明式并发</li>
+</ul>
+<h3>层2</h3>
+<ul>
+	<li>C后端</li>
+	<li>WebAssembly后端</li>
+	<li>Lua后端</li>
+	<li>积极的内存管理</li>
+	<li>全局垃圾回收</li>
+	<li>整数优化</li>
+	<li>尾递归消除</li>
+</ul>
+<p>编译器正在开发，可以先体验基于HTML5的旧版不完整的<a href=qutum/ target=_blank>图形化演示</a>。
+
+<h2>许可协议</h2>
+<p>Qutum代码许可协议为<a href='http://www.gnu.org/licenses/gpl.html'>GNU GPL许可协议版本3</a>。
+<p>Qutum内容许可协议为<a href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons 3.0 BY-SA</a>。
+
+<h2>版权所有</h2>
+<p>版权所有 2008-2013 <a href='http://qiantum.com'>蔡倩彦</a>。
+
+<hr id=rightWd></div>
+
+
+<!--==================== Script for layout ====================-->
+
+<script type='text/javascript'>
+Hint = document.getElementById('hintZh')
+L = document.getElementById('left')
+R = document.getElementById('right')
+Lw = document.getElementById('leftWd')
+Rw = document.getElementById('rightWd')
+W = false
+
+function layout()
+{
+	var wide = Lw.offsetWidth + Rw.offsetWidth < document.body.clientWidth * 0.94
+	if (wide != W)
+	{
+		L.style.width = wide ? '49%' : ''
+		L.style.cssFloat = wide ? 'left' : ''
+		R.style.width = wide ? '48%' : ''
+		R.style.cssFloat = wide ? 'right' : ''
+		Hint.style.display = wide ? 'none' : ''
+		Lw.style.visibility = wide ? 'hidden' : ''
+	}
+	W = wide
+	for (var l = L.firstChild, r = R.firstChild; l != null && r != null; )
+		if ( !l.style) // not tag
+			l = l.nextSibling
+		else if ( !r.style) // not tag
+			r = r.nextSibling
+		else
+		{
+			if ( !wide)
+				l.style.height = r.style.height = ''
+			else if (l.clientHeight != r.clientHeight)
+			{
+				l.style.position = r.style.position = 'relative'
+				l.style.height = r.style.height = ''
+				var v = l.clientHeight - r.clientHeight  
+				if (v < 0)
+				{
+					l.style.height = r.clientHeight + 'px'
+					if (v = l.clientHeight - r.clientHeight)
+						l.style.height = r.clientHeight - v + 'px'
+				}
+				else if (v > 0)
+				{
+					r.style.height = l.clientHeight + 'px'
+					if (v = l.clientHeight - r.clientHeight)
+						r.style.height = l.clientHeight + v + 'px'
+				}
+			}
+			l = l.nextSibling
+			r = r.nextSibling
+		}
+	setTimeout(layout, 250)
+}
+layout()
+</script>
+</body>
+</html>
