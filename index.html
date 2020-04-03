@@ -24,12 +24,15 @@
 	body		{ display:grid; grid:auto / auto-flow 51% 2% 47%; }
 	body>div>*	{ box-sizing:border-box; margin-block-end:0.1em; }
 	#left,
-	#right		{ display:contents; }
+	#right, ul	{ display:contents; }
 	#left *		{ grid-column:1; }
 	#right *	{ grid-column:3; }
 	#left h1	{ grid-column:1/4; text-align:center; margin:1em 10% 1.2em; }
 	#right h1,
 	sup			{ display:none; }
+	li				{ margin-left:5ex; }
+	li:first-child	{ margin-top:1em; }
+	li:last-child	{ margin-bottom:0.5em; }
 }
 </style>
 </head>
@@ -78,7 +81,7 @@
 <h2>License</h2>
 <p>Code license of Qutum is <a href='http://www.gnu.org/licenses/gpl.html'>GNU General Public License version 3</a>.</p>
 <p>Content license of Qutum is <a href='http://creativecommons.org/licenses/by-sa/3.0/'>Creative Commons 3.0 BY-SA</a>.</p>
-<p>No warranty of anything done by Qutum, any license allowed for codes written in Qutum.</p>
+<p>No warranty of anything done by Qutum, any license is allowed for codes written in Qutum.</p>
 
 <h2>Copyright</h2>
 <p>Copyright 2008-2020 <a href='http://qiantum.com'>Qianyan Cai</a>.</p>
