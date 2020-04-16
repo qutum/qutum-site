@@ -23,13 +23,11 @@
 @media (min-width:50em) {
 	body		{ display:grid; grid:auto / auto-flow 51% 2% 47%; }
 	body>div>*	{ box-sizing:border-box; margin-block-end:0.1em; }
-	#left,
-	#right, ul	{ display:contents; }
 	#left *		{ grid-column:1; }
 	#right *	{ grid-column:3; }
 	#left h1	{ grid-column:1/4; text-align:center; margin:1em 10% 1.2em; }
-	#right h1,
-	sup			{ display:none; }
+	#left, #right, ul	{ display:contents; }
+	#right h1, sup		{ display:none; }
 	li				{ margin-left:5ex; }
 	li:first-child	{ margin-top:1em; }
 	li:last-child	{ margin-bottom:0.5em; }
@@ -52,18 +50,18 @@
 <ul>
 	<li>Quite concise</li>
 	<li>Pure functional without side effect</li>
-	<li>Data flow</li>
 	<li>Pure object oriented</li>
-	<li>Memory safety</li>
 	<li>Closure and currying</li>
 	<li>Named and default parameter</li>
+	<li>Partly non-strict and lazy evaluation</li>
 	<li>No null nor nil</li>
+	<li>Structural type</li>
 	<li>Multiple type without name conflict</li>
 	<li>Static type</li>
 	<li>Type inference</li>
 	<li>Polymorphic generic type</li>
-	<li>Duck typing</li>
 	<li>Multiple dispatch</li>
+	<li>Memory safety</li>
 </ul>
 <h3>Runtime and Compiler</h3>
 <ul>
@@ -102,18 +100,18 @@
 <ul>
 	<li>相当简洁</li>
 	<li>纯函数式无副作用</li>
-	<li>数据流</li>
 	<li>纯面向对象</li>
-	<li>内存安全</li>
 	<li>闭包和柯里化</li>
 	<li>命名和默认参数</li>
+	<li>部分非严格惰性求值</li>
 	<li>无null无nil</li>
+	<li>结构式类型</li>
 	<li>多重类型无名称冲突</li>
 	<li>静态类型</li>
 	<li>类型推导</li>
 	<li>多态泛型</li>
-	<li>Duck类型</li>
 	<li>多分派</li>
+	<li>内存安全</li>
 </ul>
 <h3>运行时和编译器</h3>
 <ul>
